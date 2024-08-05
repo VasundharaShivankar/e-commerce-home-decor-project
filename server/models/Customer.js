@@ -11,10 +11,6 @@ const userSchema = new Schema({
         required: true,
         unique: true
     },
-    password: {
-        type: String,
-        required: true
-    },
     dob: {
         type: Date,
         required: true,
@@ -37,6 +33,6 @@ const userSchema = new Schema({
 
     });
 
-const User = mongoose.model('users', userSchema);
+const Customer = mongoose.model('users', userSchema);
 
-export default User;
+export default Customer;
