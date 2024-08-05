@@ -1,6 +1,7 @@
 
 import User from "../../models/User.js";
 import { hashPassword } from "../../../helpers/userHelper.js";
+import JWT from "jsonwebtoken";
 
 export const registerController= async(req,res)=>
 {
@@ -47,4 +48,11 @@ export const registerController= async(req,res)=>
             error:error.message
         })
     }
+}
+
+export const loginController= async(req,res)=>{
+    try{
+
+    }
+    catch{}
 }
