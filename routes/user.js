@@ -10,5 +10,5 @@ const userRoutes=express.Router()
 
 userRoutes.post('/register', registerController);
 userRoutes.post('/login',loginController);
-router.get("/test", requireSignIn, isAdmin, testController);
+userRoutes.get("/test", requireSignIn, isAdmin, testController);
 export default userRoutes;

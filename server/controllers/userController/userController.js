@@ -37,7 +37,13 @@ export const registerController= async(req,res)=>
         res.status(201).json({
             success:true,
             message:"User created successfully",
-            user
+            user: {
+              _id: user._id,
+              name: user.name,
+              email: user.email,
+              phone: user.phone,
+              address: user.address,
+            },
     });
     }
     catch(error){
@@ -88,7 +94,7 @@ export const loginController = async (req, res) => {
           name: user.name,
           email: user.email,
           phone: user.phone,
-          adddress: user.address,
+          address: user.address,
         },
         token,
       });
